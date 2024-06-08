@@ -1,37 +1,30 @@
 namespace Algorithms.SortClasses;
 
-public class BubbleSort
+public class BubbleSort: ISortAlgorithm
 {
-    private static List<T> Swap<T>(List<T> list, int firstIndex, int secondIndex)
-    {
-        // Swapping values by tuple deconstruction.
-        (list[firstIndex], list[secondIndex]) = (list[secondIndex], list[firstIndex]);
-        return list;
-    }
-
     // Passes one time through entire array, swapping any corresponding elements.
-    private List<int> SortUnitIteration(List<int> data)
+    private static List<int> SortUnitIteration(List<int> Data)
     {
-        for (int i = 0; i < data.Count - 1; i++)
+        for (int i = 0; i < Data.Count - 1; i++)
         {
-            if (data[i] > data[i + 1])
+            if (Data[i] > Data[i + 1])
             {
-                data = Swap(data, i, i + 1);
+                Data = HelperMethods.Swap(Data, i, i + 1);
             }
         }
 
-        return data;
+        return Data;
     }
 
     // Public method for sorting. Applies one sorting iteration for each data point.
     // Runs in O(n^2), after all, this IS bubble sort.
-    public List<int> Sort(List<int> data)
+    public List<int> Sort(List<int> Data)
     {
-        for (int n = 0; n < data.Count; n++)
+        for (int n = 0; n < Data.Count; n++)
         {
-            data = SortUnitIteration(data);
+            Data = SortUnitIteration(Data);
         }
 
-        return data;
+        return Data;
     }
 }

@@ -14,11 +14,9 @@ public class BubbleSort
     {
         for (int i = 0; i < data.Count - 1; i++)
         {
-            int secondIndex = i + 1;
-
-            if (data[i] > data[secondIndex])
+            if (data[i] > data[i + 1])
             {
-                data = Swap(data, i, secondIndex);
+                data = Swap(data, i, i + 1);
             }
         }
 

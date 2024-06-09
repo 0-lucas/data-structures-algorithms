@@ -1,6 +1,3 @@
-using System.Runtime.CompilerServices;
-using Microsoft.VisualBasic;
-
 namespace Algorithms.SortClasses;
 
 public class MergeSort : ISortAlgorithm

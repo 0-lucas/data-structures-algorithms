@@ -22,7 +22,9 @@ public class BubbleSort: ISortAlgorithm
     {
         for (int n = 0; n < Data.Count; n++)
         {
-            Data = SortUnitIteration(Data);
+            List<int> sortedData = SortUnitIteration(Data);
+
+            Data = sortedData;
         }
 
         return Data;

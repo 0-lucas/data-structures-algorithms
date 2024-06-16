@@ -3,7 +3,12 @@ namespace Algorithms.SortClasses;
 public class MergeSort : ISortAlgorithm
 {
 	// Compliance to ISortAlgorithm interface
-	public List<int> Sort(List<int> Data) => Divide(Data);
+	public static List<int> Sort(List<int> Data)
+	{
+	 	MergeSort mergeSort = new();
+	 	return mergeSort.Divide(Data);
+	}
+		
 
 	// Splits the array into two sub-arrays recursively, leftList and rightList.
 	internal List<int> Divide(List<int> Data)

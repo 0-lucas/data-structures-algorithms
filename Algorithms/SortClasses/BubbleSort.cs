@@ -12,14 +12,14 @@ public class BubbleSort: ISortAlgorithm
                 Data = HelperMethods.Swap(Data, i, i + 1);
             }
         }
-
         return Data;
     }
 
     // Public method for sorting. Applies one sorting iteration for each data point.
-    // Runs in O(n^2), after all, this IS bubble sort.
-    public List<int> Sort(List<int> Data)
+    // Runs in O(n^2). Need to implement a early stop condition...
+    public static List<int> Sort(List<int> Data)
     {
+
         for (int n = 0; n < Data.Count; n++)
         {
             List<int> sortedData = SortUnitIteration(Data);

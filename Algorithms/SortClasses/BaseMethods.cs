@@ -25,5 +25,9 @@ public class HelperMethods
 
 public interface ISortAlgorithm
 {
-    List<int> Sort(List<int> Data);
+    static List<int> Sort(List<int> Data)
+    {
+        return Data;
+    }
+
 }

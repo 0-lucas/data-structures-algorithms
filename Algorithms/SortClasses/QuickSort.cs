@@ -3,9 +3,11 @@ using Algorithms.SortClasses;
 public class QuickSort : ISortAlgorithm
 {
 	// Public method for sorting.
-	public List<int> Sort(List<int> Data)
+	public static List<int> Sort(List<int> Data)
 	{	
-		Conquer(ref Data, 0, Data.Count - 1);
+		QuickSort quickSort = new();
+		quickSort.Conquer(ref Data, 0, Data.Count - 1);
+		
 		return Data;
 	}
 

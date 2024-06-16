@@ -24,7 +24,7 @@ public class SinglyLinkedList
     public Element? Head;
     public int Count;
 
-    public void InsertAtBeginning(int Value)
+    public void InsertFirst(int Value)
     {
         Element newElement = new(Value);
         newElement.NextElement = Head;
@@ -33,10 +33,10 @@ public class SinglyLinkedList
         Count++;
     }
 
-    public void InsertAtEnd(int Value)
+    public void Insertlast(int Value)
     {
         if (Head == null) // If linked list is already empty, we can just insert wherever.
-            InsertAtBeginning(Value);
+            InsertFirst(Value);
 
         Element newElement = new(Value);
         Element lastElement = GetLastElement();
@@ -44,6 +44,14 @@ public class SinglyLinkedList
         lastElement.NextElement = newElement;
         Count++;
     }
+
+	public void PopFirst()
+	{
+		if (Head == null) // If linked list is already empty, we can just insert wherever.
+			throw new EntryPointNotFoundException("No HEAD element");
+
+		this.Head = Head.NextElement;
+	}
 
     public Element GetLastElement()
     {

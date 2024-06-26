@@ -37,7 +37,7 @@ public class MergeSort : ISortAlgorithm
 		List<int> resultList = [];
 
 		// While one of the lists still has data points.
-		// Only stops when all values have been transfered to resultList.
+		// Only stops when all values have been transferred to resultList.
 		while (LeftList.Count > 0 || RightList.Count > 0)
 		{
 			// Get first value from each list. If no value, returns null.
